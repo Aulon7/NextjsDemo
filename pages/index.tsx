@@ -7,11 +7,17 @@ import { baseUrl, fetchApi } from '@api/fetchApi';
 
 const Home = ({ propertiesForRent, propertiesForSale }: SaleRentProps) => {
   return (
-    <Box>
+    <Box
+      width={{
+        base: '100%', // 0-48em
+        md: '100%', // 48em-80em,
+        xl: '100%', // 80em+
+      }}
+    >
       <Banner
         purpose='RENT A HOUSE'
         title='Rental Houses for Everyone'
-        description='Explore varitety of our beatiful buildings'
+        description='Explore variety of our beatiful buildings'
         buttonText='Explore Renting'
         linkName='/search?purpose=for-rent'
         imageUrl='/images/build1.jpg'
@@ -25,7 +31,7 @@ const Home = ({ propertiesForRent, propertiesForSale }: SaleRentProps) => {
       <Banner
         purpose='BUY A HOUSE'
         title='Find, Buy & Own Your Dream House'
-        description='Explore varitety of our beatiful buildings'
+        description='Explore variety of our beatiful buildings'
         buttonText='Explore Buying'
         linkName='/search?purpose=for-sale'
         imageUrl='/images/build2.png'
