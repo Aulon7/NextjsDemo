@@ -9,9 +9,9 @@ const Home = ({ propertiesForRent, propertiesForSale }: SaleRentProps) => {
   return (
     <Box
       width={{
-        base: '100%', // 0-48em
-        md: '100%', // 48em-80em,
-        xl: '100%', // 80em+
+        base: '100%',
+        md: '100%',
+        xl: '100%',
       }}
     >
       <Banner
@@ -20,9 +20,9 @@ const Home = ({ propertiesForRent, propertiesForSale }: SaleRentProps) => {
         description='Explore variety of our beatiful buildings'
         buttonText='Explore Renting'
         linkName='/search?purpose=for-rent'
-        imageUrl='/images/build1.jpg'
+        imageUrl='/images/wp.jpg'
       />
-      <Flex flexWrap='wrap' justifyContent='space-between'>
+      <Flex flexWrap='wrap' justifyContent='space-between' marginTop='20' marginBottom='20'>
         {propertiesForRent?.map((property: PropertyData) => (
           <Property property={property} key={property.id} />
         ))}
@@ -34,9 +34,10 @@ const Home = ({ propertiesForRent, propertiesForSale }: SaleRentProps) => {
         description='Explore variety of our beatiful buildings'
         buttonText='Explore Buying'
         linkName='/search?purpose=for-sale'
-        imageUrl='/images/build2.png'
+        imageUrl='/images/banner.jpg'
+        height='600px'
       />
-      <Flex flexWrap='wrap' justifyContent='space-between'>
+      <Flex flexWrap='wrap' justifyContent='space-between' marginTop='20' marginBottom='20'>
         {propertiesForSale?.map((property: PropertyData) => (
           <Property property={property} key={property.id} />
         ))}
@@ -48,8 +49,8 @@ const Home = ({ propertiesForRent, propertiesForSale }: SaleRentProps) => {
 export default Home;
 
 export async function getStaticProps() {
-  const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`);
-  const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
+  const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=8`);
+  const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=8`);
 
   return {
     props: {

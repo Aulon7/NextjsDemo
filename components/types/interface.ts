@@ -46,6 +46,7 @@ export interface BannerInterface {
   description: string;
   linkName: string;
   buttonText: string;
+  height?: string;
 }
 
 type AmenityType = {

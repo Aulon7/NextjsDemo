@@ -31,7 +31,7 @@ const Property = ({ property }: PropertyProps) => {
               {rooms}
               <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
             </Flex>
-            <Flex justifyContent='center' marginTop='5'>
+            <Flex justifyContent='flex-start' marginTop='5'>
               <Link href={`/property/${externalID}`} passHref>
                 <Button fontSize='md' border='2px' borderColor='blue.400'>
                   Read more

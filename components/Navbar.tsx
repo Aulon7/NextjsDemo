@@ -5,7 +5,7 @@ import { BsSearch } from 'react-icons/bs';
 import { FiKey } from 'react-icons/fi';
 
 const Navbar = () => (
-  <Flex p='2' borderBottom='1px' borderColor='gray.300'>
+  <Flex p='3' borderBottom='1px' borderColor='gray.300'>
     <Box fontSize='3xl' color='blue.500' fontWeight='bold' paddingLeft='10'>
       <Link href='/'>Real Estate</Link>
     </Box>
